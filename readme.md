@@ -30,4 +30,4 @@ Throughout the lectures, I've taken notes on key concepts and algorithms that wa
 ### Projects
 - [Degrees](https://github.com/Shaileshsaravanan/CS50AI/tree/main/Week%200%20-%20Search/Degrees)
 - [Quiz 0](https://github.com/Shaileshsaravanan/CS50AI/blob/main/Week%200%20-%20Search/Quiz%200.png)
-- Tic-Tac-Toe - Under Progress
+- [Tic-Tac-Toe](https://github.com/Shaileshsaravanan/CS50AI/tree/main/Week%200%20-%20Search/Tic-Tac-Toe)
