@@ -28,5 +28,6 @@ Throughout the lectures, I've taken notes on key concepts and algorithms that wa
 - **Minimax**: An adversarial search algorithm.
 
 ### Projects
-- [Degrees](https://github.com/shaileshsaravanan/ai50/tree/master/degrees)
-- [Tic-Tac-Toe](https://github.com/nahueespinosa/ai50/tree/master/tictactoe)
+- [Degrees](https://github.com/Shaileshsaravanan/CS50AI/tree/main/Week%200%20-%20Search/Degrees)
+- [Quiz 0](https://github.com/Shaileshsaravanan/CS50AI/blob/main/Week%200%20-%20Search/Quiz%200.png)
+- Tic-Tac-Toe - Under Progress
