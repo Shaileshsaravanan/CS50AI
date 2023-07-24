@@ -29,5 +29,22 @@ Throughout the lectures, I've taken notes on key concepts and algorithms that wa
 
 ### Projects
 - [Degrees](https://github.com/Shaileshsaravanan/CS50AI/tree/main/Week%200%20-%20Search/Degrees)
-- [Quiz 0](https://github.com/Shaileshsaravanan/CS50AI/blob/main/Week%200%20-%20Search/Quiz%200.png)
 - [Tic-Tac-Toe](https://github.com/Shaileshsaravanan/CS50AI/tree/main/Week%200%20-%20Search/Tic-Tac-Toe)
+- [Quiz 0](https://github.com/Shaileshsaravanan/CS50AI/blob/main/Week%200%20-%20Search/Quiz%200.png)
+
+## Lecture 1: Knowledge
+
+### Concepts
+- **Sentence**: An assertion about the world in a knowledge representation language.
+- **Knowledge base**: A set of sentences known by a knowledge-based agent.
+- **Entailment**: Sentence A entails sentence B if, in every model where sentence A is true, sentence B is also true.
+- **Inference**: The process of deriving new sentences from existing ones.
+- **Conjunctive normal form**: A logical sentence that is a conjunction of clauses.
+- **First-order logic**: Propositional logic.
+- **Second-order logic**: Proposition logic with universal and existential quantification.
+
+### Algorithms
+- **Model checking**: Enumerating all possible models to check the truth of a proposition.
+- **Conversion to CNF** and **Inference by resolution**
+
+### Projects
