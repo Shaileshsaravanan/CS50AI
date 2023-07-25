@@ -72,7 +72,7 @@ Throughout the lectures, I've taken notes on key concepts and algorithms that wa
 
 ### Projects
 - Heredity: Under Completion
-- PageRank: Under Completion
+- [PageRank](https://github.com/Shaileshsaravanan/CS50AI/tree/main/Week%202%20-%20Uncertainty/Pagerank)
 - [Quiz 2](https://github.com/Shaileshsaravanan/CS50AI/blob/main/Week%202%20-%20Uncertainty/Quiz%202.png)
 
 ## Lecture 3: Optimization
