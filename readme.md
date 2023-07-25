@@ -49,7 +49,7 @@ Throughout the lectures, I've taken notes on key concepts and algorithms that wa
 
 ### Projects
 - [Knights](https://github.com/Shaileshsaravanan/CS50AI/tree/main/Week%201%20-%20Knowledge/Knights)
-- Minesweeper: Under Completion
+- [Minesweeper](https://github.com/Shaileshsaravanan/CS50AI/tree/main/Week%201%20-%20Knowledge/minesweeper)
 - [Quiz 1](https://github.com/Shaileshsaravanan/CS50AI/blob/main/Week%201%20-%20Knowledge/Quiz%201.png)
 
 ## Lecture 2: Uncertainty
