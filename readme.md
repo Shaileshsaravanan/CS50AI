@@ -71,7 +71,7 @@ Throughout the lectures, I've taken notes on key concepts and algorithms that wa
 - **Likelihood weighting**
 
 ### Projects
-- Heredity: Under Completion
+- [Heredity](https://github.com/Shaileshsaravanan/CS50AI/tree/main/Week%202%20-%20Uncertainty/Heredity)
 - [PageRank](https://github.com/Shaileshsaravanan/CS50AI/tree/main/Week%202%20-%20Uncertainty/Pagerank)
 - [Quiz 2](https://github.com/Shaileshsaravanan/CS50AI/blob/main/Week%202%20-%20Uncertainty/Quiz%202.png)
 
