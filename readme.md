@@ -124,8 +124,8 @@ Throughout the lectures, I've taken notes on key concepts and algorithms that wa
 - **k-Means Clustering**: Clustering data by assigning points to clusters and updating cluster centers.
 
 ### Projects
-- Shopping: Under Completion
-- Nim: Under Completion
+- [Shopping](https://github.com/Shaileshsaravanan/CS50AI/tree/main/Week%204%20-%20Learning/Shopping)
+- [Nim](https://github.com/Shaileshsaravanan/CS50AI/tree/main/Week%204%20-%20Learning/Nim)
 - [Quiz 4](https://github.com/Shaileshsaravanan/CS50AI/blob/main/Week%204%20-%20Learning/Quiz%204.png)
 
 ## Lecture 5: Neural Networks
@@ -150,8 +150,7 @@ Throughout the lectures, I've taken notes on key concepts and algorithms that wa
 - **Long Short-Term Memory (LSTM)**: A type of RNN that can learn long-term dependencies by using a gating mechanism to control information flow.
 
 ### Projects
-- Digits: Under Completion
-- Traffic: Under Completion
+- [Traffic](https://github.com/Shaileshsaravanan/CS50AI/tree/main/Week%205%20-%20Neural%20Networks/Traffic)
 - [Quiz 5](https://github.com/Shaileshsaravanan/CS50AI/blob/main/Week%205%20-%20Neural%20Networks/Quiz%205.png)
 
 ## Lecture 6: Language
