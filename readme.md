@@ -174,6 +174,6 @@ Throughout the lectures, I've taken notes on key concepts and algorithms that wa
 - **Cosine Similarity**
 
 ### Projects
-- Parser: Under Completion
-- Questions: Under Completion
+- [Parser](https://github.com/Shaileshsaravanan/CS50AI/tree/main/Week%206%20-%20Language/Parser)
+- [Questions](https://github.com/Shaileshsaravanan/CS50AI/tree/main/Week%206%20-%20Language/Questions)
 - [Quiz 6](https://github.com/Shaileshsaravanan/CS50AI/blob/main/Week%206%20-%20Language/Quiz%206.png)
