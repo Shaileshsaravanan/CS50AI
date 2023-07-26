@@ -137,26 +137,32 @@ def joint_probability(people, one_gene, two_genes, have_trait):
         * everyone in set `two_genes` has two copies of the gene, and
         * everyone not in `one_gene` or `two_gene` does not have the gene, and
         * everyone in set `have_trait` has the trait, and
-        * everyone not in set `have_trait` does not have the trait.
+        * everyone not in set` have_trait` does not have the trait.
     """
-    total_prob = 1
+    probability = 1
     for person in people:
-        num_genes = 2 if person in two_genes else 1 if person in one_gene else 0
-        has_trait = person in have_trait
-        if people[person]["mother"] is None:
-            gene_prob = PROBS["gene"][num_genes]
+        gene_number = 1 if person in one_gene else 2 if person in two_genes else 0
+        trait = True if person in have_trait else False
+        gene_num = PROBS['gene'][gene_number]
+        trait1 = PROBS['trait'][gene_number][trait]
+        if people[person]['mother'] is None:
+            probability *= gene_num * trait1
         else:
-            mother_prob = probabilities[people[person]["mother"]]["gene"][num_genes]
-            father_prob = probabilities[people[person]["father"]]["gene"][num_genes]
-            if num_genes == 2:
-                gene_prob = mother_prob * father_prob
-            elif num_genes == 1:
-                gene_prob = mother_prob * (1 - father_prob) + (1 - mother_prob) * father_prob
+            mother = people[person]['mother']
+            father = people[person]['father']
+            percentages = {}
+            for ppl in [mother, father]:
+                number = 1 if ppl in one_gene else 2 if ppl in two_genes else 0
+                percentage = 0 + PROBS['mutation'] if number == 0 else 0.5 if number == 1 else 1 - PROBS['mutation']
+                percentages[ppl] = percentage
+            if gene_number == 0:
+                probability *= (1 - percentages[mother]) * (1 - percentages[father])
+            elif gene_number == 1:
+                probability *= (1 - percentages[mother]) * percentages[father] + percentages[mother] * (1 - percentages[father])
             else:
-                gene_prob = (1 - mother_prob) * (1 - father_prob)
-        trait_prob = PROBS["trait"][num_genes][has_trait]
-        total_prob *= gene_prob * trait_prob
-    return total_prob
+                probability *= percentages[mother] * percentages[father]
+            probability *= trait1
+    return probability
 
 
 def update(probabilities, one_gene, two_genes, have_trait, p):
@@ -167,22 +173,24 @@ def update(probabilities, one_gene, two_genes, have_trait, p):
     the person is in `have_gene` and `have_trait`, respectively.
     """
     for person in probabilities:
-        num_genes = 2 if person in two_genes else 1 if person in one_gene else 0
-        has_trait = person in have_trait
-        probabilities[person]["gene"][num_genes] += p
-        probabilities[person]["trait"][has_trait] += p
+        gene_number = 1 if person in one_gene else 2 if person in two_genes else 0
+        probabilities[person]["gene"][gene_number] += p
+        probabilities[person]["trait"][person in have_trait] += p
 
 def normalize(probabilities):
     """
     Update `probabilities` such that each probability distribution
     is normalized (i.e., sums to 1, with relative proportions the same).
     """
+    normalized = probabilities.copy()
     for person in probabilities:
-        for trait in probabilities[person]["trait"]:
-            probabilities[person]["trait"][trait] /= sum(probabilities[person]["trait"].values())
-        for gene in probabilities[person]["gene"]:
-            probabilities[person]["gene"][gene] /= sum(probabilities[person]["gene"].values())
-
+        for i in ['gene', 'trait']:
+            summed = sum(probabilities[person][i].values())
+            for category in probabilities[person][i]:
+                val = probabilities[person][i][category]
+                normalized_val = val / summed
+                normalized[person][i][category] = normalized_val
+    return normalized
 
 if __name__ == "__main__":
     main()
