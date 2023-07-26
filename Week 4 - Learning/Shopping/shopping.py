@@ -35,7 +35,7 @@ def load_data(filename):
     """
     Load shopping data from a CSV file `filename` and convert into a list of
     evidence lists and a list of labels. Return a tuple (evidence, labels).
-
+    
     evidence should be a list of lists, where each list contains the
     following values, in order:
         - Administrative, an integer
@@ -59,7 +59,29 @@ def load_data(filename):
     labels should be the corresponding list of labels, where each label
     is 1 if Revenue is true, and 0 otherwise.
     """
-    raise NotImplementedError
+    evidence = []
+    labels = []
+    month_mapping = {
+        'Jan': 0, 'Feb': 1, 'Mar': 2, 'Apr': 3, 'May': 4, 'June': 5,
+        'Jul': 6, 'Aug': 7, 'Sep': 8, 'Oct': 9, 'Nov': 10, 'Dec': 11
+    }
+
+    with open(filename, 'r') as csvfile:
+        csvreader = csv.reader(csvfile)
+        next(csvreader)
+        for row in csvreader:
+            evidence_row = [
+                int(row[0]), float(row[1]), int(row[2]), float(row[3]),
+                int(row[4]), float(row[5]), float(row[6]), float(row[7]),
+                float(row[8]), float(row[9]), month_mapping[row[10]],
+                int(row[11]), int(row[12]), int(row[13]), int(row[14]),
+                1 if row[15] == 'Returning_Visitor' else 0,
+                1 if row[16] == 'TRUE' else 0
+            ]
+            label = 1 if row[17] == 'TRUE' else 0
+            evidence.append(evidence_row)
+            labels.append(label)
+    return evidence, labels
 
 
 def train_model(evidence, labels):
@@ -67,14 +89,16 @@ def train_model(evidence, labels):
     Given a list of evidence lists and a list of labels, return a
     fitted k-nearest neighbor model (k=1) trained on the data.
     """
-    raise NotImplementedError
+    model = KNeighborsClassifier(n_neighbors=1)
+    model.fit(evidence, labels)
+    return model
 
 
 def evaluate(labels, predictions):
     """
     Given a list of actual labels and a list of predicted labels,
     return a tuple (sensitivity, specificity).
-
+    
     Assume each label is either a 1 (positive) or 0 (negative).
 
     `sensitivity` should be a floating-point value from 0 to 1
@@ -85,7 +109,15 @@ def evaluate(labels, predictions):
     representing the "true negative rate": the proportion of
     actual negative labels that were accurately identified.
     """
-    raise NotImplementedError
+    total_positive = sum(labels)
+    total_negative = len(labels) - total_positive
+    true_positive = sum(1 for true, pred in zip(labels, predictions) if true == 1 and pred == 1)
+    true_negative = sum(1 for true, pred in zip(labels, predictions) if true == 0 and pred == 0)
+
+    sensitivity = true_positive / total_positive
+    specificity = true_negative / total_negative
+
+    return sensitivity, specificity
 
 
 if __name__ == "__main__":
