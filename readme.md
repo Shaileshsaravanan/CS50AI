@@ -96,7 +96,7 @@ Throughout the lectures, I've taken notes on key concepts and algorithms that wa
     - **Backtracking search**
 
 ### Projects
-- Crossword: Under Completion
+- [Crossword](https://github.com/Shaileshsaravanan/CS50AI/tree/main/Week%203%20-%20Optimization/Crossword)
 - [Quiz 3](https://github.com/Shaileshsaravanan/CS50AI/blob/main/Week%203%20-%20Optimization/Quiz%203.png)
 
 ## Lecture 4: Learning
