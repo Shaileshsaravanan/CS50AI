@@ -1,0 +1,5 @@
+**Traffic Sign Classification using CNN - README**
+
+Hello! This project is all about creating a Neural Network (NN) to classify traffic sign images. The code in `traffic.py` takes you through the whole process, loading and preprocessing the images, building and training the CNN model. The OpenCV library (cv2) is used to load each image as a numpy array and resize them to a fixed size (`IMG_WIDTH` and `IMG_HEIGHT`).
+
+To run the show, just run the `traffic.py` script with the right command-line arguments (Usage: python traffic.py data_directory [model.h5]). You can point it to a directory with all those traffic sign images. The code will split the data into training and testing sets, train the CNN model, and then show off how accurate it is on the test set. You can change the parameters of the training epochs, learning rate, dropout rate, and batch size to see how it affects the model's performance.
