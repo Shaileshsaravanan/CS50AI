@@ -4,7 +4,7 @@ Welcome to my journey through CS50’s Introduction to AI with Python! This cour
 
 Caution: Prior to accessing the files in this repository, make sure you've checked out the [academic honesty guidelines](https://cs50.harvard.edu/college/2021/fall/syllabus/#academic-honesty) of CS50.
 
-Certificate of Completion: (Under Progress)
+Certificate of Completion: [Edx](https://courses.edx.org/certificates/711311720ca745f4baa4a28f950c0b0c), [Harvardx CS50](https://certificates.cs50.io/a96c4184-a459-48fc-a1f8-4f7bbc756376.pdf?size=letter)
 
 ## Notes
 
